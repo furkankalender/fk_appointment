@@ -1,0 +1,6 @@
+framework module Pods_fk_appointmentTests {
+  umbrella header "Pods-fk_appointmentTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

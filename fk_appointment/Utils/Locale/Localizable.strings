@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  fk_appointment
+
+  Created by Furkan on 16.10.2023.
+  
+ 
+*/
+
+// Login
+"welcomeBack" = "Welcome Back";
+"createAccount" = "Create Account";
+"signIn" = "Sign In";
+
+"signupWithEmail" = "Sign Up with Email";
+
+
+//General
+"emailHint" = "Write your email";
+"passwordHint" = "Write your password";
+ "nameHint" = "Wirte your name";
+"surnameHint" = "Wirte your surname";
+"passwordAgainHint" = "Wirte your password again";
+"cityHint" = "Wirte your city";
+"townHint" = "Wirte your town";
+"neighborhoodHint" = "Wirte your neighborhood";
+"permissionHint" = "select your user type";
+"adHint" = "write Advertisement name";
+"locationHint" = "Write your locaiton";
+"nameOfBerberHint" = "Write name of berber";
+"costHint" = "write cost of seans";
+
+
+
+//Tab
+"tabHome" = "Home";
+"tabCreate" = "Create";
+"tabWishlist" = "Wishlist";
+"tabAccount" = "Account";
+
+
