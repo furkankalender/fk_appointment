@@ -53,3 +53,19 @@ struct HTIntInputView: View {
    }
 }
 
+struct EditTextField:View {
+    var text: Binding<String>
+     let width: CGFloat?
+     let height: CGFloat?
+    init(  text: Binding<String>, width: CGFloat? = nil, height: CGFloat? = nil) {
+        self.text = text
+        self.width = width
+        self.height = height
+    }
+    var body: some View {
+        HStack {
+            IconItems.edit.image().resizable().frame(width: width, height: height)
+            TextField("", text: text).foregroundColor(.black)
+        }.modifier(TextFieldModifier()).padding(.top, PagePadding.All.smallerThanNormal.rawValue).padding(.bottom,PagePadding.All.smallerThanNormal.rawValue)
+    }
+}

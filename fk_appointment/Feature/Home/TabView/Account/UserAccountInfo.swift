@@ -13,6 +13,8 @@ struct UserAccountInfo: View {
     
     var body: some View {
         NavigationView {
+          
+                        
             ScrollView {
                 Images.userAvatar.rawValue.image()
                     .resizable()
@@ -22,7 +24,7 @@ struct UserAccountInfo: View {
                     .overlay(Circle().stroke(Color.white, lineWidth: 2))
                     .shadow(radius: 5)
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 0) {
                     if viewModel.isLoading {
                         ProgressView("Loading...")
                             .progressViewStyle(CircularProgressViewStyle())
@@ -37,6 +39,16 @@ struct UserAccountInfo: View {
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarTitle("Account")
+                .toolbar {
+                    ToolbarItemGroup(placement: .primaryAction) {
+                        NavigationLink(
+                            destination: EditAccountView()
+                        ) {
+                            IconItems.edit.image().resizable().frame(width: 22, height: 22)
+                        }
+                      
+                    }
+                }
                 .frame(maxWidth: .infinity)
                 .padding()
             }
@@ -53,7 +65,7 @@ struct InfoText: View {
     var content: String
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading,spacing: 0) {
             Text(header)
                 .foregroundColor(Color.gray.opacity(0.9))
                 .font(.system(size: 18))
@@ -65,6 +77,8 @@ struct InfoText: View {
                 .font(.system(size: 18))
                 .disabled(false)
                 .padding(.bottom, 10)
-        }
+            
+            Divider().padding(.bottom, 10)
+        }.frame(maxWidth: .infinity, alignment: .leading)
     }
 }

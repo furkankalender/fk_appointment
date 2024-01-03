@@ -10,6 +10,7 @@ import Foundation
 struct PagePadding {
     enum All: Double {
         case normal = 16
+        case smallerThanNormal = 12
     }
     
     enum Horizontal: Double {

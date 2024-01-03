@@ -45,7 +45,7 @@ struct CreateAdvertisementView: View {
                
                 AlertToast(type: .regular, title: "Başarı ile Oluşturuldu!")
                 
-            }.navigationBarTitleDisplayMode(.inline).navigationBarTitle("Create Ad")
+            }.navigationBarTitleDisplayMode(.inline).navigationBarTitle("Create Ad").padding(.horizontal, PagePadding.Horizontal.normal.rawValue)
             }
         }}
     

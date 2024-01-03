@@ -9,7 +9,7 @@ struct HomeTabItem: Identifiable {
     let model: TabModel
 
     static let tabItems: [HomeTabItem] = [
-        HomeTabItem(page: AnyView(HomeView()), model: TabModel(title: .home, icon: .home)),
+        HomeTabItem(page: AnyView(HomeView().navigationBarHidden(true)), model: TabModel(title: .home, icon: .home)),
         HomeTabItem(page: AnyView(CreateAdvertisementView()), model: TabModel(title: .create, icon: .edit)),
         HomeTabItem(page: AnyView(FavoritesView()), model: TabModel(title: .wishlist, icon: .favorite)),
         HomeTabItem(page: AnyView(UserAccountInfo()), model: TabModel(title: .account, icon: .person))

@@ -8,7 +8,7 @@ struct MainTabView: View {
                 item.page.tabItem {
                     TabIconLabel(model: item.model).navigationBarHidden(true)
                 }
-            }
+            }.navigationBarHidden(true)
         }.accentColor(.peach).padding(.horizontal,0).navigationBarHidden(true)   }
 }
 
