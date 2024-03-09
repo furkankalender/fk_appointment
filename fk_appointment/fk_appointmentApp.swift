@@ -16,7 +16,7 @@ struct fk_appointmentApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            SplashView()
         }
     }
 }
