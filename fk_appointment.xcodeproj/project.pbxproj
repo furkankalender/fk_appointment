@@ -13,6 +13,12 @@
 		DC0EA5892AED9B0B002B9023 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EA5882AED9B0B002B9023 /* SignUpView.swift */; };
 		DC0EA58B2AED9BFE002B9023 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EA58A2AED9BFE002B9023 /* SignUpViewModel.swift */; };
 		DC0EA58E2AEDA4DF002B9023 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EA58D2AEDA4DF002B9023 /* UserModel.swift */; };
+		DC19F3722B9D0E7800798BEF /* LocaleStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC19F3712B9D0E7800798BEF /* LocaleStorageService.swift */; };
+		DC19F3742B9D0FC500798BEF /* LocaleStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC19F3732B9D0FC500798BEF /* LocaleStorageManager.swift */; };
+		DC19F3772B9D119600798BEF /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC19F3762B9D119600798BEF /* UserLoginModel.swift */; };
+		DC19F3792B9D123E00798BEF /* LocaleStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC19F3782B9D123E00798BEF /* LocaleStorageKeys.swift */; };
+		DC19F37C2B9D134100798BEF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC19F37B2B9D134100798BEF /* SplashView.swift */; };
+		DC19F37E2B9D13A000798BEF /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC19F37D2B9D13A000798BEF /* SplashViewModel.swift */; };
 		DC3C1CCD2AF191F60004BFB2 /* InputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C1CCC2AF191F60004BFB2 /* InputFields.swift */; };
 		DC6244A92ADC82B4006E899C /* fk_appointmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6244A82ADC82B4006E899C /* fk_appointmentApp.swift */; };
 		DC6244AB2ADC82B4006E899C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6244AA2ADC82B4006E899C /* ContentView.swift */; };
@@ -90,10 +96,16 @@
 		83BEB9C82669D8AE0BC509B3 /* Pods-fk_appointmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fk_appointmentTests.release.xcconfig"; path = "Target Support Files/Pods-fk_appointmentTests/Pods-fk_appointmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		86ACEC394B105281EB1FFADE /* Pods_fk_appointment_fk_appointmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fk_appointment_fk_appointmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D809A6D189C92017D0CB672E /* Pods-fk_appointment-fk_appointmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fk_appointment-fk_appointmentUITests.release.xcconfig"; path = "Target Support Files/Pods-fk_appointment-fk_appointmentUITests/Pods-fk_appointment-fk_appointmentUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DC0EA5852AED8FEA002B9023 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DC0EA5852AED8FEA002B9023 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DC0EA5882AED9B0B002B9023 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DC0EA58A2AED9BFE002B9023 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DC0EA58D2AEDA4DF002B9023 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DC19F3712B9D0E7800798BEF /* LocaleStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleStorageService.swift; sourceTree = "<group>"; };
+		DC19F3732B9D0FC500798BEF /* LocaleStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleStorageManager.swift; sourceTree = "<group>"; };
+		DC19F3762B9D119600798BEF /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
+		DC19F3782B9D123E00798BEF /* LocaleStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleStorageKeys.swift; sourceTree = "<group>"; };
+		DC19F37B2B9D134100798BEF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		DC19F37D2B9D13A000798BEF /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		DC3C1CCC2AF191F60004BFB2 /* InputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFields.swift; sourceTree = "<group>"; };
 		DC6244A52ADC82B4006E899C /* fk_appointment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fk_appointment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6244A82ADC82B4006E899C /* fk_appointmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fk_appointmentApp.swift; sourceTree = "<group>"; };
@@ -219,6 +231,32 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		DC19F3702B9D0E5F00798BEF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC19F3712B9D0E7800798BEF /* LocaleStorageService.swift */,
+				DC19F3732B9D0FC500798BEF /* LocaleStorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC19F3752B9D118200798BEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC19F3762B9D119600798BEF /* UserLoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC19F37A2B9D133500798BEF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DC19F37B2B9D134100798BEF /* SplashView.swift */,
+				DC19F37D2B9D13A000798BEF /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		DC62449C2ADC82B4006E899C = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +282,8 @@
 		DC6244A72ADC82B4006E899C /* fk_appointment */ = {
 			isa = PBXGroup;
 			children = (
+				DC19F3752B9D118200798BEF /* Models */,
+				DC19F3702B9D0E5F00798BEF /* Services */,
 				DC6244DB2ADC83AE006E899C /* Utils */,
 				DC6244DA2ADC83A0006E899C /* Resources */,
 				DC6244D92ADC8391006E899C /* Feature */,
@@ -304,6 +344,7 @@
 		DC6244D92ADC8391006E899C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				DC19F37A2B9D133500798BEF /* Splash */,
 				DC0EA5842AED8FBF002B9023 /* Home */,
 				DC6244F72ADDC74D006E899C /* Authentication */,
 			);
@@ -364,6 +405,7 @@
 				DC6245132AEB0626006E899C /* Icons.swift */,
 				DCACD03D2AEB1144005D47E0 /* PagePaddings.swift */,
 				DCACD0432AEB19EE005D47E0 /* Radius.swift */,
+				DC19F3782B9D123E00798BEF /* LocaleStorageKeys.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -719,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC19F3772B9D119600798BEF /* UserLoginModel.swift in Sources */,
 				DC6244FD2ADDC7F8006E899C /* Images.swift in Sources */,
 				DC6244FA2ADDC773006E899C /* LoginView.swift in Sources */,
 				DC6245142AEB0626006E899C /* Icons.swift in Sources */,
@@ -740,6 +783,9 @@
 				DCC7CC672AFE0B78005AA386 /* CustomImagePicker.swift in Sources */,
 				DCB3F2772B3DDAB800F7ACF9 /* UserInfoModel.swift in Sources */,
 				DCC7CC652AFD7EBE005AA386 /* AdvertisementCreateModel.swift in Sources */,
+				DC19F3742B9D0FC500798BEF /* LocaleStorageManager.swift in Sources */,
+				DC19F37E2B9D13A000798BEF /* SplashViewModel.swift in Sources */,
+				DC19F3722B9D0E7800798BEF /* LocaleStorageService.swift in Sources */,
 				DC6244F62ADDC503006E899C /* LocalStorage.xcdatamodeld in Sources */,
 				DCB3FC6C2AF4D68F006D6AE9 /* ViewStatusHiddenModifier.swift in Sources */,
 				DCC7CC632AFD7AA3005AA386 /* CreateAdvertisementViewModel.swift in Sources */,
@@ -747,6 +793,7 @@
 				DCACD03E2AEB1144005D47E0 /* PagePaddings.swift in Sources */,
 				DC0EA5892AED9B0B002B9023 /* SignUpView.swift in Sources */,
 				DC0EA58B2AED9BFE002B9023 /* SignUpViewModel.swift in Sources */,
+				DC19F3792B9D123E00798BEF /* LocaleStorageKeys.swift in Sources */,
 				DCC7CC692B02B446005AA386 /* SnackBars.swift in Sources */,
 				DCC7CC5E2AFA4739005AA386 /* AdvertisementModel.swift in Sources */,
 				DC6245032ADDCA70006E899C /* LocaleKeys.swift in Sources */,
@@ -756,6 +803,7 @@
 				DCACD0422AEB1647005D47E0 /* NormalButton.swift in Sources */,
 				DCB3F2732B3DD13A00F7ACF9 /* UserAccountInfo.swift in Sources */,
 				DCACD0442AEB19EE005D47E0 /* Radius.swift in Sources */,
+				DC19F37C2B9D134100798BEF /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,46 +12,49 @@ import AlertToast
 struct EditAccountView: View {
     
     @ObservedObject private var viewModel = CreateAdvertisementViewModel()
-   
+    
     let  iconSize :CGFloat = 22
     
     var body: some View {
         NavigationView{
             ScrollView{
-            VStack {
-                if viewModel.isLoading {
-                    ProgressView("Loading...") // it will change 	
-                                  .progressViewStyle(CircularProgressViewStyle())
-                }
-   
-                HTextIconField(hint: LocaleKeys.General.adHint.rawValue.locale(),iconName: IconItems.edit, text: $viewModel.adName,width: iconSize, height:iconSize ).padding(.top, PagePadding.All.normal.rawValue)
-                
-                  HTextIconField(hint: LocaleKeys.General.locationHint.rawValue.locale(), iconName: IconItems.edit, text: $viewModel.location,width: iconSize, height:iconSize ).padding(.top, PagePadding.All.normal.rawValue)
-                
-                  HTextIconField(hint: LocaleKeys.General.nameOfBerberHint.rawValue.locale(), iconName: IconItems.edit, text: $viewModel.nameOfBerber,width: iconSize, height:iconSize ).padding(.top, PagePadding.All.normal.rawValue)
-                
-                HTIntInputView(hint: LocaleKeys.General.costHint.rawValue.locale(), iconName: IconItems.edit, value: $viewModel.adCost , width: iconSize, height:iconSize).padding(.top, PagePadding.All.normal.rawValue)
-                NormalButton(onTap: {
-                    Task {
-                           await viewModel.createAdvertisement()
-                        }
-                    
-                }, title: LocaleKeys.TabView.create.rawValue).padding(.top, PagePadding.All.normal.rawValue)
-                
-            }.toast(isPresenting: $viewModel.isDone){
-                
-               
-                AlertToast(type: .regular, title: "Bilgiler başarı ile değiştirildi!")
-                
-            }.navigationBarTitleDisplayMode(.inline).navigationBarTitle("Create Ad")
-            }
-        }}
-    
-    
-    private func showSnackbar(_ text: String) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                viewModel.isDone = false
-            }
-        }
+                VStack (alignment: .leading, spacing: 0){
+                    FormFieldLabel(header: "Name")
+                    EditTextField(text: $viewModel.adName,width: iconSize, height:iconSize )
+                    FormFieldLabel(header: "Surname")
+                    EditTextField(text: $viewModel.adName,width: iconSize, height:iconSize )
+                    FormFieldLabel(header: "City")
+                    EditTextField(text: $viewModel.adName,width: iconSize, height:iconSize )
+                    FormFieldLabel(header: "Town")
+                    EditTextField(text: $viewModel.adName,width: iconSize, height:iconSize )
+                    VStack(alignment: .leading, spacing: 0){
+                        FormFieldLabel(header: "Neighborhood")
+                        EditTextField(text: $viewModel.adName,width: iconSize, height:iconSize )
+                        NormalButton(onTap: {
+                            Task {
+                                await viewModel.createAdvertisement()
+                            }
+                        }, title:"Update").padding(.top, PagePadding.All.normal.rawValue)
+                    }
+                }.toast(isPresenting: $viewModel.isDone){
+                    AlertToast(type: .regular, title: "Bilgiler başarı ile değiştirildi!")
+                }.padding(.horizontal, PagePadding.Horizontal.normal.rawValue)  .navigationBarTitle(Text(""), displayMode: .inline)
+            }  .navigationBarTitle(Text(""), displayMode: .inline)
+        }  .navigationBarTitle(Text(""), displayMode: .inline)}
 
+    private func showSnackbar(_ text: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            viewModel.isDone = false
+        }
+    }
+    
+}
+struct FormFieldLabel: View {
+    let header: String
+    var body:some View {
+        Text(header)
+            .foregroundColor(Color.black)
+            .font(.system(size: 18))
+            .disabled(false)
+    }
 }

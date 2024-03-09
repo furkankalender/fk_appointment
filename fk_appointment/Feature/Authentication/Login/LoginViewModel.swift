@@ -13,7 +13,7 @@ final class LoginViewModel: ObservableObject {
     @Published var passwordValue: String = "123456"
     @Published var isLogged: Bool = false
     @Published var errorMessage: String = ""
-    
+    private let storageService = LocaleStorageManager()
     func onLoginUser() async  {
        let result = await onLoginUser(email: emailValue, password: passwordValue)
         if result == "true" {
@@ -33,6 +33,7 @@ extension LoginViewModel: LoginUseCase {
         do {
              let result = try await Auth.auth().signIn(withEmail: email, password: password)
             CurrentUser.shared.setUserID(result.user.uid)
+            storageService.save(object: UserLoginModel(userName: email, password: password), forKey:LocaleStrogeKeys.User.loginInfo.rawValue)
         } catch {
             errorMessage = "Kullanıcı adı veya şifre yanlış."
           
