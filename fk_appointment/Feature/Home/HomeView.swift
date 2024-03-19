@@ -68,7 +68,7 @@ struct ProductCard: View {
                 Spacer()
               
                     
-                    Image(systemName: (product.isFav() ?? false) ? "heart.fill" : "heart")
+                Image(systemName: (product.isFav() ) ? "heart.fill" : "heart")
                         .font(.largeTitle)
                         .foregroundColor(.red)
                     
