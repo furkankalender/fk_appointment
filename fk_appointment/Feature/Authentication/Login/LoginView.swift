@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var appState: AppState
     @ObservedObject private var viewModel = LoginViewModel()
     
     var body: some View {
@@ -26,13 +27,18 @@ struct LoginView: View {
                     .font(.system(size: FontSizes.title1, weight: .semibold)).foregroundColor(.teflon)
                 HTextIconField(hint: LocaleKeys.General.emailHint.rawValue.locale(), iconName: IconItems.mail, text: $viewModel.emailValue, width: 25, height:25)
                 HTextSecureIconField(hint: LocaleKeys.General.passwordHint.rawValue.locale(), iconName: IconItems.lock, text: $viewModel.passwordValue ).padding(.top, PagePadding.All.normal.rawValue)
-                NavigationLink("", isActive: $viewModel.isLogged){
-                    MainTabView().navigationBarHidden(true).navigationBarBackButtonHidden(true)
-                }
-                
+               
                 HStack {
                     
                     Spacer()
+                    NavigationLink(destination: MainTabView().navigationBarHidden(true).navigationBarBackButtonHidden(true), isActive: Binding<Bool>(
+                        get: { return !appState.shouldShowLoginView && viewModel.isLogged },
+                        set: { _ in
+                      
+                        }
+                    )) {
+                        EmptyView()
+                    }
                     
                     NavigationLink(
                         destination: SignUpView()
@@ -52,6 +58,14 @@ struct LoginView: View {
                 Spacer( ).frame(height:80 )
             }.padding(.horizontal, PagePadding.Horizontal.normal.rawValue)
             Spacer()
+        }.onReceive(viewModel.$isLogged) { isLogged in
+            if isLogged {
+                if appState.shouldShowLoginView != false {
+                    appState.shouldShowLoginView = false
+                   
+                }
+               
+            }
         }
     }
 }

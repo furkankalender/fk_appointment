@@ -25,7 +25,6 @@ struct SplashView: View {
                         Text("Berber Randevu Uygulaman")
                             .font(.headline)
                             .padding(.top, 20)
-                        
                         NavigationLink("", isActive:  Binding<Bool>(
                             get: { viewModel.isLoggedInBefore ?? false },
                             set: { _ in }
@@ -42,9 +41,8 @@ struct SplashView: View {
                     }
                 }
             }
-            
-        }.onAppear{
-            viewModel.route()
+        }.task  {
+            await  viewModel.route()
         } .padding(.vertical,0).listStyle(.plain).navigationBarHidden(true)
         
     }

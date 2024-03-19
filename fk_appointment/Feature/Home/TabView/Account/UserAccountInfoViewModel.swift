@@ -14,7 +14,16 @@ import FirebaseStorage
 final class UserAccountInfoViewModel : ObservableObject{
     @Published var generalError: String = ""
     @Published var isLoading: Bool = false
+    @Published var isLogoutUser: Bool = false
     @Published var userInfo : UserInfoModel = UserInfoModel()
+    private let storageService = LocaleStorageManager()
+    
+    func resetLogoutStatus(){
+        DispatchQueue.main.async {
+            self.isLogoutUser = false
+        }
+        
+    }
     
     func fetchAdvertisements() {
         Task {
@@ -36,6 +45,12 @@ final class UserAccountInfoViewModel : ObservableObject{
                 
                 
             }
+        }
+    }
+    func logout(){
+        storageService.removeObject(forKey: LocaleStrogeKeys.User.loginInfo.rawValue)
+        DispatchQueue.main.async {
+            self.isLogoutUser = true
         }
     }
 }

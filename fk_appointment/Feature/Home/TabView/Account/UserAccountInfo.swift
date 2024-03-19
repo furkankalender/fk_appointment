@@ -8,6 +8,7 @@
 import SwiftUI
 struct UserAccountInfo: View {
     @ObservedObject private var viewModel = UserAccountInfoViewModel()
+    @EnvironmentObject var appState: AppState
     
     let  iconSize: CGFloat = 22
     
@@ -36,6 +37,17 @@ struct UserAccountInfo: View {
                     InfoText(header: "City", content: viewModel.userInfo.city ?? "")
                     InfoText(header: "Town", content: viewModel.userInfo.town ?? "")
                     InfoText(header: "Neighborhood", content: viewModel.userInfo.neighborhood ?? "")
+                    		
+                    NavigationLink("", isActive: $viewModel.isLogoutUser){
+                       
+                        EmptyView()
+                    }
+               
+                    NormalButton(onTap: {
+                        Task {
+                            viewModel.logout()
+                        }
+                    }, title:"Logout").padding(.top, PagePadding.All.normal.rawValue)
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarTitle("Account")
@@ -55,9 +67,15 @@ struct UserAccountInfo: View {
         }
         .onAppear {
             viewModel.fetchAdvertisements()
+        }   .onReceive(viewModel.$isLogoutUser) { isLogoutUser in
+            if isLogoutUser {
+                viewModel.resetLogoutStatus()
+                appState.shouldShowLoginView = true
+                
+            }
         }
-    }
-}
+    }}
+
 
 struct InfoText: View {
     

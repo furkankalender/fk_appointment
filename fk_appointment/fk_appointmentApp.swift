@@ -13,10 +13,21 @@ struct fk_appointmentApp: App {
     init(){
         FirebaseApp.configure()
     }
-
+    @StateObject var appState = AppState()
     var body: some Scene {
+        
         WindowGroup {
-            SplashView()
+            
+             if appState.shouldShowLoginView == false {
+                SplashView().environmentObject(appState)
+            } else {
+                SplashView().environmentObject(appState)
+            }
+           
         }
     }
 }
+class AppState: ObservableObject {
+    @Published var shouldShowLoginView = false
+}
+
